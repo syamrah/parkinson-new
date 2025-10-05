@@ -185,7 +185,7 @@
             const timeLabel = new Date(data.timestamp_ms).toLocaleTimeString();
 
             // simpan hanya 50 data terakhir supaya chart tidak terlalu panjang
-            if (tremorChart.data.labels.length >= 50) {
+            if (tremorChart.data.labels.length >= 20) {
               tremorChart.data.labels.shift();
               tremorChart.data.datasets[0].data.shift();
             }
@@ -221,3 +221,4 @@
     <footer>invicta team ❤️</footer>
   </body>
 </html>
+
