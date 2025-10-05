@@ -182,8 +182,7 @@
             data.magnitude !== undefined &&
             data.timestamp_ms !== undefined
           ) {
-            const magnitude = parseFloat(data.magnitude);
-            const timaLabel new Date(data.timestamp_ms).toLocaleTimeString();
+            const timeLabel = new Date(data.timestamp_ms).toLocalTimeString();
 
             // simpan hanya 50 data terakhir supaya chart tidak terlalu panjang
             if (tremorChart.data.labels.length >= 20) {
@@ -222,6 +221,7 @@
     <footer>invicta team ❤️</footer>
   </body>
 </html>
+
 
 
 
