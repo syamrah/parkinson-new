@@ -104,7 +104,7 @@
 
       let ctx = null;
       let tremorChart = null;
-      const threshold = 1.0; // ubah sesuai batas tremor deteksi (contoh: 0.8g)
+      const threshold = 0.8; // ubah sesuai batas tremor deteksi (contoh: 0.8g)
       const indicator = () => document.getElementById("tremorIndicator");
 
       window.onload = function () {
@@ -182,10 +182,10 @@
             data.magnitude !== undefined &&
             data.timestamp_ms !== undefined
           ) {
-            const timeLabel = new Date(data.timestamp_ms).toLocalTimeString();
+            const timeLabel = new Date(data.timestamp_ms).toLocaleTimeString();
 
             // simpan hanya 50 data terakhir supaya chart tidak terlalu panjang
-            if (tremorChart.data.labels.length >= 20) {
+            if (tremorChart.data.labels.length >= 50) {
               tremorChart.data.labels.shift();
               tremorChart.data.datasets[0].data.shift();
             }
@@ -221,7 +221,3 @@
     <footer>invicta team ❤️</footer>
   </body>
 </html>
-
-
-
-
