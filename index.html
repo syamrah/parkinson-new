@@ -182,8 +182,6 @@
             data.magnitude !== undefined &&
             data.timestamp_ms !== undefined
           ) {
-            ) {
-            const magnitude = parseFloat(data.magnitude);
             const timeLabel = new Date(data.timestamp_ms).toLocaleTimeString();
 
             // simpan hanya 50 data terakhir supaya chart tidak terlalu panjang
@@ -223,4 +221,3 @@
     <footer>invicta team ❤️</footer>
   </body>
 </html>
-
